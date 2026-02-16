@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>職員専用ポータル｜入江市</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .box { max-width: 520px; margin: 30px auto; border: 1px solid #ddd; padding: 16px; border-radius: 12px; }
+  label { display:block; margin: 10px 0 6px; }
+  input { width: 100%; padding: 10px; font-size: 16px; }
+  button { padding: 10px 14px; font-size: 16px; }
+  .muted { font-size: small; opacity: 0.8; }
+</style>
+</head>
+<body>
+
+<div class="box">
+  <h1>入江市 職員専用ポータル</h1>
+  <p class="muted">※本ページは職員向けです。アクセスは記録されます。</p>
+
+  <label for="pw">パスワード</label>
+  <input id="pw" type="password" placeholder="パスワードを入力" autocomplete="off">
+
+  <p>
+    <button id="btn">ログイン</button>
+  </p>
+
+  <p id="msg" class="muted"></p>
+</div>
+
+<script>
+  const OK = "P-7A41"; // ここは後で好きに変えてOK
+  const btn = document.getElementById("btn");
+  const msg = document.getElementById("msg");
+
+  btn.addEventListener("click", () => {
+    const v = document.getElementById("pw").value.trim();
+    if (v === OK) {
+      // 成功：職員ページへ
+      location.href = "portal.html";
+    } else {
+      msg.textContent = "パスワードが違います。";
+    }
+  });
+</script>
+
+</body>
+</html>
