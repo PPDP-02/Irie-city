@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>スポット詳細｜入江市 観光公式サイト</title>
+<style>
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .box { border: 1px solid #ddd; padding: 12px; border-radius: 10px; }
+  .warn { border-color: #999; }
+  .muted { font-size: small; opacity: 0.85; }
+  .tag { display:inline-block; padding:2px 8px; border:1px solid #ccc; border-radius:999px; font-size:12px; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>スポット詳細</h1>
+  <nav>
+    <a href="spot.html">一覧へ戻る</a> |
+    <a href="index.html">トップ</a>
+  </nav>
+</header>
+
+<main>
+  <div id="content" class="box">読み込み中...</div>
+</main>
+
+<script>
+  const spotsPublic = {
+    "1": {
+      name: "神橋岩（しんきょういわ）",
+      lead: "波の浸食で中央に穴が開いた、橋のような形の奇岩。穴の向こうに沈む夕日が人気です。",
+      details: [
+        "夕暮れ時は混雑します。譲り合ってご観覧ください。",
+        "足元が滑りやすい箇所があります。歩きやすい靴でお越しください。"
+      ],
+      imageAlt: "神橋岩のイメージ（準備中）",
+      tags: ["景勝地", "夕日百選"]
+    },
+    "2": {
+      name: "入江市朝市",
+      lead: "港町ならではの新鮮な魚介が並ぶ朝市。早朝からにぎわいます。",
+      details: [
+        "人気商品は早めに売り切れる場合があります。",
+        "保冷バッグの持参がおすすめです。"
+      ],
+      imageAlt: "朝市のイメージ（準備中）",
+      tags: ["グルメ", "海鮮"]
+    },
+    "4": {
+      name: "入江海浜公園",
+      lead: "海辺の散策やピクニックにぴったり。季節によって海のアクティビティも楽しめます。",
+      details: [
+        "海況により体験内容が変更になる場合があります。",
+        "日差しが強い日は帽子・日焼け対策をおすすめします。"
+      ],
+      imageAlt: "海浜公園のイメージ（準備中）",
+      tags: ["ビーチ", "アクティビティ"]
+    },
+    "7": {
+      name: "入江塗り工房",
+      lead: "入江市の伝統工芸「入江塗り」を展示・紹介する施設です。",
+      details: [
+        "展示内容は季節により変更します。",
+        "館内は撮影可能エリアと不可エリアがあります。案内に従ってください。"
+      ],
+      imageAlt: "入江塗りのイメージ（準備中）",
+      tags: ["文化", "伝統工芸"]
+    }
+  };
+
+  // 未公開（欠番）スポット
+  const spotsHidden = {
+    "3": {
+      name: "P中央管理区域",
+      lead: "※現在、一般公開を行っておりません。",
+      details: [
+        "立入および案内の提供は行っておりません。",
+        "管理：特別運営管理課"
+      ],
+      hint: {
+        label: "管理コード断片",
+        value: "P-7A"
+      }
+    },
+    "5": {
+      name: "入江めんたい工場",
+      lead: "※施設見学の受付を停止しています。",
+      details: [
+        "人員配置の都合により、当面の間、外部案内を行いません。",
+        "関係者以外の立入を禁止します。"
+      ],
+      hint: {
+        label: "補助コード断片",
+        value: "41"
+      }
+    },
+    "6": {
+      name: "入江市観測桟橋",
+      lead: "※老朽化のため立入禁止。",
+      details: [
+        "夜間の立入は危険です。絶対に近づかないでください。",
+        "点検予定：7月上旬（詳細非公開）"
+      ],
+      hint: null
+    }
+  };
+
+  const params = new URLSearchParams(location.search);
+  const id = params.get("id");
+
+  const el = document.getElementById("content");
+
+  function renderNotFound() {
+    el.classList.add("warn");
+    el.innerHTML = `
+      <div class="tag">案内</div>
+      <h2>該当するスポットが見つかりません</h2>
+      <p class="muted">指定された番号（id=${id ?? "未指定"}）のスポットは存在しないか、公開を終了しています。</p>
+      <p><a href="spot.html">スポット一覧へ戻る</a></p>
+    `;
+  }
+
+  function renderPublic(s) {
+    document.title = `${s.name}｜入江市 観光公式サイト`;
+    el.innerHTML = `
+      <div class="tag">公開中</div>
+      <h2>${s.name}</h2>
+      <p>${s.lead}</p>
+      <div class="muted">画像：${s.imageAlt}</div>
+      <h3>見どころ</h3>
+      <ul>${s.details.map(x => `<li>${x}</li>`).join("")}</ul>
+      <p class="muted">タグ：${(s.tags || []).join(" / ")}</p>
+    `;
+  }
+
+  function renderHidden(s) {
+    document.title = `${s.name}｜入江市（案内制限）`;
+    el.classList.add("warn");
+    const hintHtml = s.hint ? `
+      <hr>
+      <p class="muted">${s.hint.label}：<strong>${s.hint.value}</strong></p>
+    ` : "";
+    el.innerHTML = `
+      <div class="tag">案内制限</div>
+      <h2>${s.name}</h2>
+      <p>${s.lead}</p>
+      <ul>${s.details.map(x => `<li>${x}</li>`).join("")}</ul>
+      ${hintHtml}
+      <p class="muted">※本ページの内容に関する個別のお問い合わせには対応しておりません。</p>
+    `;
+  }
+
+  if (!id) {
+    renderNotFound();
+  } else if (spotsPublic[id]) {
+    renderPublic(spotsPublic[id]);
+  } else if (spotsHidden[id]) {
+    renderHidden(spotsHidden[id]);
+  } else {
+    renderNotFound();
+  }
+</script>
+
+</body>
+</html>
