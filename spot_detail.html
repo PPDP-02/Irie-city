@@ -27,6 +27,8 @@
 </main>
 
 <script>
+  const IMG_VER = "v1";
+
   const spotsPublic = {
     "1": {
       name: "神橋岩（しんきょういわ）",
@@ -129,7 +131,7 @@
   function renderPublic(s) {
     document.title = `${s.name}｜入江市 観光公式サイト`;
     el.innerHTML = `
-    ${s.image ? `<img src="${s.image}" style="max-width:100%;margin-top:10px;border-radius:10px;">` : ""}
+    ${s.image ? `<img src="${s.image}?${IMG_VER}" style="max-width:100%;margin-top:10px;border-radius:10px;">` : ""}
       <div class="tag">公開中</div>
       <h2>${s.name}</h2>
       <p>${s.lead}</p>
@@ -148,7 +150,7 @@
       <p class="muted">${s.hint.label}：<strong>${s.hint.value}</strong></p>
     ` : "";
     el.innerHTML = `
-    ${s.image ? `<img src="${s.image}" style="max-width:100%;margin-top:10px;border-radius:10px;">` : ""}
+    ${s.image ? `<img src="${s.image}?${IMG_VER}" style="max-width:100%;margin-top:10px;border-radius:10px;">` : ""}
       <div class="tag">案内制限</div>
       <h2>${s.name}</h2>
       <p>${s.lead}</p>
