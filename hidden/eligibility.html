@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>参加資格確認｜入江市特別観光プログラム</title>
+<style>
+  body{margin:0;background:#000;color:#fff;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;}
+  .wrap{max-width:820px;margin:0 auto;padding:48px 20px;}
+  h1{margin:0 0 10px;font-size:28px;}
+  .muted{font-size:12px;opacity:.7;line-height:1.6}
+  .box{border:1px solid #444;border-radius:14px;padding:18px;background:rgba(255,255,255,.03);}
+  label{display:block;margin:14px 0 6px;opacity:.9}
+  input{
+    width:100%;padding:12px 12px;border-radius:10px;
+    border:1px solid #333;background:#050505;color:#fff;
+    font-size:16px;outline:none;
+  }
+  input:focus{border-color:#777}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media (max-width:720px){.row{grid-template-columns:1fr}}
+  .btn{
+    margin-top:18px;
+    padding:12px 18px;border-radius:999px;
+    border:1px solid #fff;background:#000;color:#fff;
+    font-size:16px;cursor:pointer;
+  }
+  .btn:hover{background:#fff;color:#000}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <p><a href="program.html" style="color:#fff;opacity:.6;text-decoration:none;">← 戻る</a></p>
+
+  <h1>参加資格確認</h1>
+  <p class="muted">必要事項を入力し、ENTRYを押してください。</p>
+
+  <div class="box">
+    <!-- NOTE: ギミック用。actionなし＋JS遷移で通信しない -->
+    <div class="row">
+      <div>
+        <label for="name">名前</label>
+        <input id="name" type="text" placeholder="例：入江 太郎">
+      </div>
+      <div>
+        <label for="age">年齢</label>
+        <input id="age" type="text" inputmode="numeric" placeholder="例：20">
+      </div>
+    </div>
+
+    <label for="mail">メールアドレス</label>
+    <input id="mail" type="text" placeholder="例：taro@example.com">
+
+    <label for="addr">住所</label>
+    <input id="addr" type="text" placeholder="例：入江市◯◯区◯◯ 1-2-3">
+
+    <button class="btn" type="button" onclick="go()">ENTRY</button>
+
+    <p class="muted" id="msg" style="margin-top:12px;"></p>
+  </div>
+
+  <p class="muted" style="margin-top:26px;">© 入江市</p>
+</div>
+
+<script>
+function go(){
+  // 入力は何でもOK。通信はしない（ページ遷移のみ）
+  document.getElementById("msg").textContent = "確認中…";
+  setTimeout(() => {
+    location.href = "entry_complete.html";
+  }, 650);
+}
+</script>
+
+</body>
+</html>
