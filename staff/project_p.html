@@ -43,6 +43,55 @@
     条件達成者には、規定の報酬を支給する。<br>
     詳細は個別契約書に記載。
   </p>
+<h2>事業位置付け</h2>
+
+<p>
+本プログラムは入江市が主催する体験型観光事業であるとともに、
+市の財源を確保する重要な事業である。
+</p>
+
+<p>
+一般的なイベントとは異なり、
+参加者の選定及び管理、イベントの実施は特別運営管理課のみが行う。
+</p>
+
+<p>
+参加者については、プログラム実施中に発生したトラブル等に市は一切の責任を負わないものとする。
+</p>
+
+<hr>
+
+<h2>特設ページ</h2>
+
+<p class="muted">
+※閲覧には認証が必要です
+</p>
+
+<input type="password" id="pw" placeholder="パスワードを入力">
+
+<button onclick="openPage()">
+アクセス
+</button>
+
+<script>
+function openPage(){
+
+const password="shinkyo";
+
+const input=document.getElementById("pw").value;
+
+if(input===password){
+
+location.href="../hidden/";
+
+}else{
+
+alert("認証に失敗しました");
+
+}
+
+}
+</script>
 
   <hr>
 
