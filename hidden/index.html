@@ -3,62 +3,70 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>特別観光プログラムのご案内</title>
+<title>入江市 特別観光案内</title>
 <style>
-  body {
-    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-    background: #ffffff;
-    color: #111;
-  }
-  .box {
-    max-width: 720px;
-    margin: 40px auto;
-    border: 1px solid #ccc;
-    padding: 20px;
-  }
-  .muted {
-    font-size: small;
-    color: #555;
-  }
-  .btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 18px;
-    border: 1px solid #000;
-    text-decoration: none;
-    color: #000;
-  }
+body{
+  margin:0;
+  background:#000;
+  color:#fff;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.catch{
+  font-size:28px;
+  margin-bottom:60px;
+  letter-spacing:2px;
+}
+
+.link{
+  color:#fff;
+  text-decoration:none;
+  border:1px solid #fff;
+  padding:14px 28px;
+  font-size:20px;
+  transition:.3s;
+}
+
+.link:hover{
+  background:#fff;
+  color:#000;
+}
+
+.footer{
+  position:fixed;
+  bottom:10px;
+  width:100%;
+  text-align:center;
+  font-size:12px;
+  opacity:.4;
+}
 </style>
 </head>
 <body>
 
-<div class="box">
+<div class="hero">
 
-<h1>特別観光プログラムのご案内</h1>
+<div class="catch">
+海の町、入江で特別な体験を。
+</div>
 
-<p>
-このたび入江市では、選ばれた方のみを対象とした<br>
-特別観光プログラムを実施いたします。
-</p>
-
-<p>
-本プログラムは、通常の観光では体験できない<br>
-特別な内容となっております。
-</p>
-
-<p>
-参加には条件があります。<br>
-詳細をご確認のうえ、ご応募ください。
-</p>
-
-<p class="muted">
-※本プログラムは予告なく終了する場合があります。
-</p>
-
-<a href="apply.html" class="btn">
-応募ページへ進む
+<a href="program.html" class="link">
+入江市特別観光プログラム
 </a>
 
+</div>
+
+<div class="footer">
+© 入江市
 </div>
 
 </body>
