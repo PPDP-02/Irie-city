@@ -148,6 +148,7 @@
       <p class="muted">${s.hint.label}：<strong>${s.hint.value}</strong></p>
     ` : "";
     el.innerHTML = `
+    ${s.image ? `<img src="${s.image}" style="max-width:100%;margin-top:10px;border-radius:10px;">` : ""}
       <div class="tag">案内制限</div>
       <h2>${s.name}</h2>
       <p>${s.lead}</p>
