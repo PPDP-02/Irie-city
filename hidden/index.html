@@ -4,22 +4,56 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>入江市 特別観光案内</title>
+
 <style>
+/* ===== 背景 ===== */
 body{
   margin:0;
-
   background:
     linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)),
-    url("../images/dark_sea.png?v=2");
-
+    url("../images/dark_sea.png?v=3");
   background-size:cover;
   background-position:center;
   background-attachment:fixed;
-
   color:#fff;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
-  
-/* グリッチホバー/タップ効果（PC・スマホ対応） */
+
+/* ===== 中央レイアウト ===== */
+.hero{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 24px;
+}
+
+.catch{
+  font-size:28px;
+  margin:0 0 32px;
+  letter-spacing:2px;
+  text-shadow:0 0 18px rgba(0,0,0,0.7);
+}
+
+/* ===== ボタン ===== */
+.link{
+  color:#fff;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,0.85);
+  padding:14px 28px;
+  font-size:20px;
+  background:rgba(0,0,0,0.35);
+  backdrop-filter: blur(2px);
+  transition:0.25s;
+}
+.link:hover{
+  background:rgba(255,255,255,0.95);
+  color:#000;
+}
+
+/* ===== グリッチ（ホバー/タップ） ===== */
 .glitch-link{
   position:relative;
   display:inline-block;
@@ -39,60 +73,22 @@ body{
   75%{ transform:translate(-1px,-1px); }
   100%{ transform:translate(0,0); }
 }
-  
-.hero{
-  height:100vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:0 24px;
-}
-
-.catch{
-  font-size:28px;
-  margin:0 0 32px;
-  letter-spacing:2px;
-  text-shadow:0 0 18px rgba(0,0,0,0.7);
-}
-
-.link{
-  color:#fff;
-  text-decoration:none;
-  border:1px solid rgba(255,255,255,0.85);
-  padding:14px 28px;
-  font-size:20px;
-  background:rgba(0,0,0,0.35);
-  backdrop-filter: blur(2px);
-  transition:0.25s;
-}
-
-.link:hover{
-  background:rgba(255,255,255,0.95);
-  color:#000;
-}
-
 </style>
+
 </head>
 <body>
 
 <div class="hero">
+  <div class="catch">海の町、入江で特別な体験を。</div>
 
-<div class="catch">
-海の町、入江で特別な体験を。
+  <a href="program.html" class="link glitch-link">
+    入江市特別観光プログラム
+  </a>
 </div>
 
-<a href="program.html" class="link glitch-link">
-  入江市特別観光プログラム
-</a>
+</body>
+</html>
 
-
-</div>
-
-<div class="footer">
-© 入江市
-</div>
 
 
 </body>
