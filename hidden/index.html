@@ -39,6 +39,39 @@ body{
   75%{ transform:translate(-1px,-1px); }
   100%{ transform:translate(0,0); }
 }
+  
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 24px;
+}
+
+.catch{
+  font-size:28px;
+  margin:0 0 32px;
+  letter-spacing:2px;
+  text-shadow:0 0 18px rgba(0,0,0,0.7);
+}
+
+.link{
+  color:#fff;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,0.85);
+  padding:14px 28px;
+  font-size:20px;
+  background:rgba(0,0,0,0.35);
+  backdrop-filter: blur(2px);
+  transition:0.25s;
+}
+
+.link:hover{
+  background:rgba(255,255,255,0.95);
+  color:#000;
+}
 
 </style>
 </head>
