@@ -4,35 +4,168 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>観光スポット｜入江市 観光公式サイト</title>
+
+<style>
+  :root{
+    --text:#111;
+    --muted: rgba(0,0,0,0.65);
+    --card: rgba(255,255,255,0.92);
+    --shadow: 0 10px 30px rgba(0,0,0,0.18);
+    --radius: 14px;
+  }
+
+  body{
+    margin:0;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    background:#f6f7f9;
+    color:var(--text);
+  }
+
+  /* ===== ヘッダー（トップと同系統） ===== */
+  header{
+    position:sticky;
+    top:0;
+    z-index:10;
+    backdrop-filter: blur(8px);
+    background: rgba(255,255,255,0.75);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+
+  header .inner{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 14px 16px;
+    display:flex;
+    gap:14px;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+  }
+
+  header h1{
+    font-size: 18px;
+    margin:0;
+    letter-spacing: 1px;
+  }
+
+  nav{
+    font-size: 14px;
+    opacity: 0.9;
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+  }
+
+  nav a{
+    color:#111;
+    text-decoration:none;
+    padding:6px 8px;
+    border-radius: 10px;
+    display:inline-block;
+  }
+
+  nav a:hover{
+    background: rgba(0,0,0,0.06);
+  }
+
+  /* ===== メイン ===== */
+  main{
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 22px 16px 40px;
+  }
+
+  .lead{
+    margin: 0 0 16px;
+    color: var(--muted);
+  }
+
+  .card{
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 18px;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  h2{
+    margin: 0 0 10px;
+    font-size: 16px;
+  }
+
+  /* ===== スポット一覧（リストを整形） ===== */
+  ul{
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 10px;
+  }
+
+  li a{
+    display:block;
+    text-decoration:none;
+    color:#111;
+    background: rgba(0,0,0,0.04);
+    padding: 12px 12px;
+    border-radius: 12px;
+    transition: 0.2s;
+    border: 1px solid rgba(0,0,0,0.06);
+  }
+
+  li a:hover{
+    background: rgba(0,0,0,0.08);
+    transform: translateY(-1px);
+  }
+
+  .note{
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  /* ===== フッター ===== */
+  footer{
+    padding: 24px 16px;
+    text-align:center;
+    color: rgba(0,0,0,0.6);
+  }
+</style>
+
 </head>
 <body>
 
 <header>
-  <h1>入江市 観光スポット</h1>
-  <nav>
-    <a href="index.html">トップ</a> |
-    <a href="event.html">イベント</a> |
-    <a href="course.html">モデルコース</a> |
-    <a href="news.html">お知らせ</a> |
-    <a href="about.html">入江市について</a> |
-    <a href="contact.html">お問い合わせ</a>
-  </nav>
+  <div class="inner">
+    <h1>入江市 観光スポット</h1>
+    <nav>
+      <a href="index.html">トップ</a>
+      <a href="event.html">イベント</a>
+      <a href="course.html">モデルコース</a>
+      <a href="news.html">お知らせ</a>
+      <a href="about.html">入江市について</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-  <p>入江市内の観光スポットをご紹介します。</p>
+  <p class="lead">入江市内の観光スポットをご紹介します。</p>
 
-  <h2>スポット一覧</h2>
-  <ul>
-    <li><a href="spot_detail.html?id=1">神橋岩（しんきょういわ）</a></li>
-    <li><a href="spot_detail.html?id=2">入江市朝市</a></li>
-    <li><a href="spot_detail.html?id=4">入江海浜公園</a></li>
-    <li><a href="spot_detail.html?id=7">入江塗り工房</a></li>
-  </ul>
+  <section class="card">
+    <h2>スポット一覧</h2>
+    <ul>
+      <li><a href="spot_detail.html?id=1">神橋岩（しんきょういわ）</a></li>
+      <li><a href="spot_detail.html?id=2">入江市朝市</a></li>
+      <li><a href="spot_detail.html?id=4">入江海浜公園</a></li>
+      <li><a href="spot_detail.html?id=7">入江塗り工房</a></li>
+    </ul>
 
-  <p style="font-size: small;">
-    ※安全上の理由により、公開内容を変更する場合があります。
-  </p>
+    <p class="note">
+      ※安全上の理由により、公開内容を変更する場合があります。
+    </p>
+  </section>
 </main>
 
 <footer>
@@ -41,5 +174,4 @@
 
 </body>
 </html>
-
 
