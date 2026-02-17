@@ -4,34 +4,218 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>入江市 観光公式サイト</title>
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --text:#111;
+      --card: rgba(255,255,255,0.88);
+      --shadow: 0 10px 30px rgba(0,0,0,0.18);
+      --radius: 14px;
+    }
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background:#f6f7f9;
+      color:var(--text);
+    }
+
+    /* ===== ヘッダー ===== */
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.75);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    header .inner{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    header h1{
+      font-size: 18px;
+      margin:0;
+      letter-spacing: 1px;
+    }
+
+    nav{
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    nav a{
+      color:#111;
+      text-decoration:none;
+      padding:6px 8px;
+      border-radius: 10px;
+      display:inline-block;
+    }
+
+    nav a:hover{
+      background: rgba(0,0,0,0.06);
+    }
+
+    /* ===== ヒーロー（背景画像） ===== */
+    .hero{
+      min-height: 58vh;
+      display:flex;
+      align-items:flex-end;
+      padding: 34px 16px;
+      background:
+        linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.65)),
+        url("images/shinkyo.png?v=1");
+      background-size: cover;
+      background-position: center;
+      color:#fff;
+    }
+
+    .hero .inner{
+      max-width: 980px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .hero h2{
+      font-size: 36px;
+      margin: 0 0 10px;
+      letter-spacing: 1.5px;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .hero p{
+      margin: 0 0 18px;
+      font-size: 16px;
+      opacity: 0.95;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .hero .cta{
+      display:inline-block;
+      background: rgba(255,255,255,0.9);
+      color:#111;
+      text-decoration:none;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.18);
+    }
+
+    .hero .cta:hover{
+      background:#fff;
+    }
+
+    /* ===== 本文 ===== */
+    main{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 18px 16px 40px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 820px){
+      .grid{ grid-template-columns: 1fr; }
+      .hero h2{ font-size: 30px; }
+    }
+
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .card h3{
+      margin: 0 0 12px;
+      font-size: 16px;
+    }
+
+    ul{
+      margin: 10px 0 0 18px;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    small{
+      opacity: 0.8;
+    }
+
+    /* ===== フッター ===== */
+    footer{
+      padding: 24px 16px;
+      text-align:center;
+      color: rgba(0,0,0,0.6);
+    }
+  </style>
 </head>
+
 <body>
+
   <header>
-    <h1>入江市 観光公式サイト</h1>
-    <nav>
-      <a href="spot.html">観光スポット</a> |
-      <a href="course.html">モデルコース</a> |
-      <a href="event.html">イベント</a> |
-      <a href="access.html">アクセス</a> |
-      <a href="about.html">入江市について</a> |
-      <a href="contact.html">お問い合わせ</a>
-    </nav>
+    <div class="inner">
+      <h1>入江市 観光公式サイト</h1>
+      <nav>
+        <a href="spot.html">観光スポット</a>
+        <a href="course.html">モデルコース</a>
+        <a href="event.html">イベント</a>
+        <a href="access.html">アクセス</a>
+        <a href="about.html">入江市について</a>
+        <a href="contact.html">お問い合わせ</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <h2>ようこそ入江市へ</h2>
-    <p>季節のイベント、自然、食。入江市の魅力をご案内します。</p>
+  <section class="hero">
+    <div class="inner">
+      <h2>ようこそ入江市へ</h2>
+      <p>季節のイベント、自然、食。入江市の魅力をご案内します。</p>
+      <a class="cta" href="spot.html">おすすめスポットを見る</a>
+    </div>
+  </section>
 
-    <h3>新着情報</h3>
-    <ul>
-      <li>観光案内所の営業時間変更のお知らせ</li>
-      <li>今月のおすすめスポットを更新しました</li>
-      <li><small>※一部の体験型イベントについては、内容の公開を行っておりません。</small></li>
-    </ul>
+  <main>
+    <div class="grid">
+
+      <section class="card">
+        <h3>入江市からのお知らせ</h3>
+        <ul>
+          <li>観光案内所の営業時間変更のお知らせ</li>
+          <li>今月のおすすめスポットを更新しました</li>
+          <li><small>※一部の体験型イベントについては、内容の公開を行っておりません。</small></li>
+        </ul>
+      </section>
+
+      <aside class="card">
+        <h3>クイックリンク</h3>
+        <ul>
+          <li><a href="event.html">イベント情報</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </aside>
+
+    </div>
   </main>
 
   <footer>
     <small>© 入江市</small>
   </footer>
+
 </body>
 </html>
+
