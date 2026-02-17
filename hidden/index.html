@@ -17,37 +17,28 @@ body{
   background-attachment:fixed;
 
   color:#fff;
-  /* グリッチホバー効果 */
+  
+/* グリッチホバー/タップ効果（PC・スマホ対応） */
 .glitch-link{
   position:relative;
   display:inline-block;
+  will-change: transform;
 }
 
-.glitch-link:hover{
-  animation:glitch 0.15s linear 2;
+.glitch-link:hover,
+.glitch-link:active,
+.glitch-link:focus-visible{
+  animation: glitch 0.15s linear 2;
 }
 
 @keyframes glitch{
+  0%{ transform:translate(0,0); }
+  25%{ transform:translate(-2px,1px); }
+  50%{ transform:translate(2px,-1px); }
+  75%{ transform:translate(-1px,-1px); }
+  100%{ transform:translate(0,0); }
+}
 
-  0%{
-    transform:translate(0,0);
-  }
-
-  25%{
-    transform:translate(-2px,1px);
-  }
-
-  50%{
-    transform:translate(2px,-1px);
-  }
-
-  75%{
-    transform:translate(-1px,-1px);
-  }
-
-  100%{
-    transform:translate(0,0);
-  }
 
 }
 
