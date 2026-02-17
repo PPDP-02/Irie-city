@@ -17,6 +17,40 @@ body{
   background-attachment:fixed;
 
   color:#fff;
+  /* グリッチホバー効果 */
+.glitch-link{
+  position:relative;
+  display:inline-block;
+}
+
+.glitch-link:hover{
+  animation:glitch 0.15s linear 2;
+}
+
+@keyframes glitch{
+
+  0%{
+    transform:translate(0,0);
+  }
+
+  25%{
+    transform:translate(-2px,1px);
+  }
+
+  50%{
+    transform:translate(2px,-1px);
+  }
+
+  75%{
+    transform:translate(-1px,-1px);
+  }
+
+  100%{
+    transform:translate(0,0);
+  }
+
+}
+
 }
 
 
@@ -67,9 +101,10 @@ body{
 海の町、入江で特別な体験を。
 </div>
 
-<a href="program.html" class="link">
-入江市特別観光プログラム
+<a href="program.html" class="link glitch-link">
+  入江市特別観光プログラム
 </a>
+
 
 </div>
 
