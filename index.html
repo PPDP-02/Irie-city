@@ -7,7 +7,6 @@
 
   <style>
     :root{
-      --bg:#0b0f14;
       --text:#111;
       --card: rgba(255,255,255,0.88);
       --shadow: 0 10px 30px rgba(0,0,0,0.18);
@@ -51,6 +50,9 @@
     nav{
       font-size: 14px;
       opacity: 0.9;
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
     }
 
     nav a{
@@ -155,6 +157,36 @@
       opacity: 0.8;
     }
 
+    /* ===== 本命：No.7 が一瞬だけ見える ===== */
+    .ghost7{
+      opacity: 0;
+      filter: blur(0.2px);
+      display:inline-block;
+      animation: ghostflash 10s infinite;
+    }
+
+    @keyframes ghostflash{
+      0%{ opacity:0; }
+      96%{ opacity:0; }
+      97%{ opacity:0.35; }
+      98%{ opacity:0; }
+      100%{ opacity:0; }
+    }
+
+    /* ほんの少し“チラつき”を足す（気付いた人だけ） */
+    .ghost7 span{
+      display:inline-block;
+      animation: microshift 10s infinite;
+    }
+
+    @keyframes microshift{
+      0%{ transform:translate(0,0); }
+      96%{ transform:translate(0,0); }
+      97%{ transform:translate(-1px,0); }
+      98%{ transform:translate(0,0); }
+      100%{ transform:translate(0,0); }
+    }
+
     /* ===== フッター ===== */
     footer{
       padding: 24px 16px;
@@ -197,6 +229,9 @@
           <li>観光案内所の営業時間変更のお知らせ</li>
           <li>今月のおすすめスポットを更新しました</li>
           <li><small>※一部の体験型イベントについては、内容の公開を行っておりません。</small></li>
+
+          <!-- No.7 が一瞬だけ見える（通常は見えない） -->
+          <li class="ghost7" aria-hidden="true"><span>（更新予定）おすすめスポット No.7</span></li>
         </ul>
       </section>
 
