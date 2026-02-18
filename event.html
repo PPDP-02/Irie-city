@@ -2,29 +2,228 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>イベント情報｜入江市 観光公式サイト</title>
+
+  <style>
+    :root{
+      --text:#111;
+      --muted: rgba(0,0,0,0.65);
+      --card: rgba(255,255,255,0.92);
+      --shadow: 0 10px 30px rgba(0,0,0,0.18);
+      --radius: 14px;
+    }
+
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      background:#f6f7f9;
+      color:var(--text);
+    }
+
+    /* ===== ヘッダー（統一） ===== */
+    header{
+      position:sticky;
+      top:0;
+      z-index:10;
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.75);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    header .inner{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 14px 16px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    header h1{
+      font-size: 18px;
+      margin:0;
+      letter-spacing: 1px;
+    }
+
+    nav{
+      font-size: 14px;
+      opacity: 0.9;
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px;
+    }
+
+    nav a{
+      color:#111;
+      text-decoration:none;
+      padding:6px 8px;
+      border-radius: 10px;
+      display:inline-block;
+    }
+
+    nav a:hover{
+      background: rgba(0,0,0,0.06);
+    }
+
+    /* ===== メイン ===== */
+    main{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 22px 16px 40px;
+    }
+
+    .lead{
+      margin: 0 0 16px;
+      color: var(--muted);
+    }
+
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    h2{
+      margin: 0 0 12px;
+      font-size: 16px;
+    }
+
+    /* ===== イベント一覧（カード化） ===== */
+    .events{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .event{
+      background: rgba(0,0,0,0.04);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 12px;
+      padding: 14px;
+    }
+
+    .event .title{
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .event .desc{
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .event .meta{
+      margin-top: 10px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .note{
+      margin-top: 14px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    /* ===== フッター ===== */
+    footer{
+      padding: 24px 16px;
+      text-align:center;
+      color: rgba(0,0,0,0.6);
+    }
+
+    /* ===== フィクション注意書き（全ページ共通） ===== */
+    .fiction-notice{
+      background:#5aa9e6;
+      color:#ffffff;
+      font-size:13px;
+      margin-top:40px;
+    }
+
+    .fiction-inner{
+      max-width:980px;
+      margin:0 auto;
+      padding:18px 16px;
+      line-height:1.6;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1>入江市 イベント情報</h1>
+<header>
+  <div class="inner">
+    <h1>入江市 観光公式サイト</h1>
+    <nav>
+      <a href="index.html">トップ</a>
+      <a href="spot.html">観光スポット</a>
+      <a href="course.html">モデルコース</a>
+      <a href="news.html">お知らせ</a>
+      <a href="about.html">入江市について</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
 
-<ul>
-  <li>入江夏まつり</li>
-  <li>海辺のマルシェ</li>
-  <li>入江市フードフェス</li>
+<main>
+  <p class="lead">入江市内で開催されるイベント情報を掲載しています。</p>
 
-  <li>
-    体験型観光プログラム<br>
-    開催時期：未公開<br>
-    開催場所：非公開<br>
-    内容：非公開<br>
-    主催：入江市
-  </li>
-</ul>
+  <section class="card">
+    <h2>イベント一覧</h2>
 
-<p style="font-size: small;">
-※当プログラムは、通常の観光イベントとは参加条件が異なります。
-</p>
+    <ul class="events">
+      <li class="event">
+        <div class="title">入江夏まつり</div>
+        <p class="desc">港町の夏を彩る、季節の催しです。</p>
+      </li>
+
+      <li class="event">
+        <div class="title">海辺のマルシェ</div>
+        <p class="desc">海辺の散策路で楽しめる小さな市です。</p>
+      </li>
+
+      <li class="event">
+        <div class="title">入江市フードフェス</div>
+        <p class="desc">入江市の食を楽しむイベントです。</p>
+      </li>
+
+      <!-- 体験型観光プログラム（不穏枠） -->
+      <li class="event">
+        <div class="title">体験型観光プログラム</div>
+        <p class="desc">一部情報の公開を行っておりません。</p>
+
+        <div class="meta">
+          開催時期：未公開<br>
+          開催場所：非公開<br>
+          内容：非公開<br>
+          主催：入江市
+        </div>
+      </li>
+    </ul>
+
+    <p class="note">※当プログラムは、通常の観光イベントとは参加条件が異なります。</p>
+  </section>
+</main>
+
+<footer>
+  <small> 入江市</small>
+</footer>
+
+<div class="fiction-notice">
+  <div class="fiction-inner">
+    このWebサイトの内容は考察コンテンツのために作られたフィクションであり、実在の人物・団体とは一切関係がありません。
+  </div>
+</div>
 
 </body>
 </html>
