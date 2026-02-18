@@ -4,61 +4,276 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>入江市について・組織｜入江市 観光公式サイト</title>
+
+<style>
+:root{
+  --text:#111;
+  --muted: rgba(0,0,0,0.65);
+  --card: rgba(255,255,255,0.92);
+  --shadow: 0 10px 30px rgba(0,0,0,0.18);
+  --radius: 14px;
+}
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background:#f6f7f9;
+  color:var(--text);
+}
+
+/* ===== ヘッダー ===== */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.75);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+header .inner{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+header h1{
+  font-size:18px;
+  margin:0;
+}
+
+nav{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  text-decoration:none;
+  color:#111;
+  padding:6px 8px;
+  border-radius:10px;
+}
+
+nav a:hover{
+  background: rgba(0,0,0,0.06);
+}
+
+/* ===== メイン ===== */
+
+main{
+  max-width:980px;
+  margin:0 auto;
+  padding:24px 16px 40px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:18px;
+  border:1px solid rgba(0,0,0,0.06);
+  margin-bottom:16px;
+}
+
+.card h2{
+  margin-top:0;
+}
+
+.card ul{
+  line-height:1.8;
+}
+
+.note{
+  margin-top:12px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* 職員ページリンク */
+
+.staff-link{
+
+  margin-top:10px;
+
+}
+
+.staff-link a{
+
+  display:inline-block;
+
+  padding:10px 14px;
+
+  background:#e9eef3;
+
+  border-radius:10px;
+
+  text-decoration:none;
+
+  color:#111;
+
+  font-size:14px;
+
+}
+
+.staff-link a:hover{
+
+  background:#dde5ec;
+
+}
+
+/* ===== フッター ===== */
+
+footer{
+  text-align:center;
+  padding:24px;
+  color: rgba(0,0,0,0.6);
+}
+
+/* ===== フィクション注意書き ===== */
+
+.fiction-notice{
+  background:#5aa9e6;
+  color:#fff;
+  font-size:13px;
+  margin-top:40px;
+}
+
+.fiction-inner{
+  max-width:980px;
+  margin:0 auto;
+  padding:18px 16px;
+  line-height:1.6;
+}
+
+</style>
 </head>
 <body>
 
+
 <header>
-  <h1>入江市について・組織</h1>
-  <nav>
-    <a href="index.html">トップ</a> |
-    <a href="spot.html">観光スポット</a> |
-    <a href="course.html">モデルコース</a> |
-    <a href="event.html">イベント</a> |
-    <a href="news.html">お知らせ</a> |
-    <a href="contact.html">お問い合わせ</a>
-  </nav>
+
+<div class="inner">
+
+<h1>入江市 観光公式サイト</h1>
+
+<nav>
+<a href="index.html">トップ</a>
+<a href="spot.html">観光スポット</a>
+<a href="course.html">モデルコース</a>
+<a href="event.html">イベント</a>
+<a href="news.html">お知らせ</a>
+<a href="contact.html">お問い合わせ</a>
+</nav>
+
+</div>
+
 </header>
 
+
 <main>
-  <h2>入江市について</h2>
-  <p>
-    入江市は大きな港を有する、海に面した活気あふれる町です。海鮮や朝市が名物で、
-    ビーチやシーカヤックなどの海のアクティビティも楽しめます。
-  </p>
-  <p>
-    市内には、波に削られて中央に穴が開いた奇岩「神橋岩（しんきょういわ）」があり、
-    穴越しに夕日が見える景観が人気です（国の夕日百選）。
-  </p>
-  <p>
-    また、伝統工芸「入江塗り」も受け継がれており、町の文化として親しまれています。
-  </p>
 
-  <h2>組織（抜粋）</h2>
-  <ul>
-    <li>観光振興課</li>
-    <li>地域活性推進課</li>
-    <li>イベント企画課</li>
-    <li><strong>特別運営管理課</strong></li>
-  </ul>
 
-  <p style="font-size: small;">
-    ※特別運営管理課に関するお問い合わせは、観光窓口では承りません。
-  </p>
+<div class="card">
 
-  <hr>
+<h2>入江市について</h2>
 
-  <h2>職員専用ページ</h2>
-  <p style="font-size: small;">
-    ※関係者以外の閲覧は推奨されません。閲覧にはパスワードが必要です。
-  </p>
-  <p>
-    <a href="staff/login.html">職員専用ページへ</a>
-  </p>
+<p>
+
+入江市は大きな港を有する、海に面した活気あふれる町です。海鮮や朝市が名物で、
+ビーチやシーカヤックなどの海のアクティビティも楽しめます。
+
+</p>
+
+<p>
+
+市内には、波に削られて中央に穴が開いた奇岩「神橋岩（しんきょういわ）」があり、
+穴越しに夕日が見える景観が人気です（国の夕日百選）。
+
+</p>
+
+<p>
+
+また、伝統工芸「入江塗り」も受け継がれており、市民の生活と文化の中で大切に守られています。
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>組織（抜粋）</h2>
+
+<ul>
+
+<li>観光振興課</li>
+
+<li>地域活性推進課</li>
+
+<li>イベント企画課</li>
+
+<li><strong>特別運営管理課</strong></li>
+
+</ul>
+
+
+<p class="note">
+
+※特別運営管理課に関するお問い合わせは、観光窓口では承りません。
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>職員専用ページ</h2>
+
+<p class="note">
+
+※関係者以外の閲覧は推奨されません。閲覧にはパスワードが必要です。
+
+</p>
+
+
+<div class="staff-link">
+
+<a href="staff/login.html">職員専用ページへ</a>
+
+</div>
+
+
+</div>
+
+
 </main>
 
+
 <footer>
-  <small>© 入江市</small>
+
+<small>入江市</small>
+
 </footer>
+
+
+<div class="fiction-notice">
+
+<div class="fiction-inner">
+
+このWebサイトの内容は考察コンテンツのために作られたフィクションであり、実在の人物・団体とは一切関係がありません。
+
+</div>
+
+</div>
+
 
 </body>
 </html>
+
