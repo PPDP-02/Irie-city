@@ -210,12 +210,21 @@
   padding:18px 16px;
 }
     
-    /* リンク（アクセス用） */
+ /* リンク（アクセス用） */
 nav a.nav-disabled{
-  opacity:0.5;
+  opacity:0.45;
   cursor:default;
   pointer-events:none;
+
+  /* 背景を固定 */
+  background:transparent;
 }
+
+/* 何も起きないようにする */
+nav a.nav-disabled:hover{
+  background:transparent;
+}
+
 
 
   </style>
