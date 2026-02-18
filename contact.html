@@ -4,64 +4,249 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>お問い合わせ｜入江市 観光公式サイト</title>
+
+<style>
+:root{
+  --text:#111;
+  --muted: rgba(0,0,0,0.65);
+  --card: rgba(255,255,255,0.92);
+  --shadow: 0 10px 30px rgba(0,0,0,0.18);
+  --radius: 14px;
+}
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background:#f6f7f9;
+  color:var(--text);
+}
+
+/* ===== ヘッダー ===== */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.75);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+header .inner{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+header h1{
+  font-size:18px;
+  margin:0;
+}
+
+nav{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  text-decoration:none;
+  color:#111;
+  padding:6px 8px;
+  border-radius:10px;
+}
+
+nav a:hover{
+  background: rgba(0,0,0,0.06);
+}
+
+/* ===== メイン ===== */
+
+main{
+  max-width:980px;
+  margin:0 auto;
+  padding:24px 16px 40px;
+}
+
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  padding:18px;
+  border:1px solid rgba(0,0,0,0.06);
+  margin-bottom:16px;
+}
+
+.card h2{
+  margin-top:0;
+}
+
+.card ul{
+  line-height:1.8;
+}
+
+.note{
+  margin-top:12px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* ===== フッター ===== */
+
+footer{
+  text-align:center;
+  padding:24px;
+  color: rgba(0,0,0,0.6);
+}
+
+/* ===== フィクション注意書き ===== */
+
+.fiction-notice{
+  background:#5aa9e6;
+  color:#fff;
+  font-size:13px;
+  margin-top:40px;
+}
+
+.fiction-inner{
+  max-width:980px;
+  margin:0 auto;
+  padding:18px 16px;
+  line-height:1.6;
+}
+
+</style>
 </head>
 <body>
 
+
 <header>
-  <h1>お問い合わせ</h1>
-  <nav>
-    <a href="index.html">トップ</a> |
-    <a href="spot.html">観光スポット</a> |
-    <a href="course.html">モデルコース</a> |
-    <a href="event.html">イベント</a> |
-    <a href="news.html">お知らせ</a> |
-    <a href="about.html">入江市について</a>
-  </nav>
+<div class="inner">
+
+<h1>入江市 観光公式サイト</h1>
+
+<nav>
+<a href="index.html">トップ</a>
+<a href="spot.html">観光スポット</a>
+<a href="course.html">モデルコース</a>
+<a href="event.html">イベント</a>
+<a href="news.html">お知らせ</a>
+<a href="about.html">入江市について</a>
+</nav>
+
+</div>
 </header>
 
+
 <main>
-  <p>
-    入江市の観光に関するお問い合わせは、下記の窓口までご連絡ください。
-    パンフレットの送付、観光案内所のご案内、取材・掲載に関するご相談も承ります。
-  </p>
 
-  <h2>観光案内所（駅前）</h2>
-  <ul>
-    <li>受付時間：9:00〜17:00</li>
-    <li>休館日：年末年始</li>
-    <li>対応：観光案内／パンフレット配布／落とし物（観光関連）</li>
-  </ul>
 
-  <h2>お問い合わせフォーム（準備中）</h2>
-  <p>現在、フォームは準備中です。お急ぎの場合は観光案内所へお問い合わせください。</p>
+<div class="card">
 
-  <hr>
+<p>
+入江市の観光に関するお問い合わせは、下記の窓口までご連絡ください。
+パンフレットの送付、観光案内所のご案内、取材・掲載に関するご相談も承ります。
+</p>
 
-  <h2>注意事項</h2>
-  <ul>
-    <li>お問い合わせ内容により、回答にお時間をいただく場合があります。</li>
-    <li>イベントの開催状況は、<a href="event.html">イベント情報</a>をご確認ください。</li>
-  </ul>
+</div>
 
-  <h2>体験型観光プログラムに関するお問い合わせについて</h2>
-  <p>
-    体験型観光プログラム「P」に関する内容、参加条件、開催場所、報酬等につきましては、
-    個別のお問い合わせには対応しておりません。
-  </p>
 
-  <p style="font-size: small;">
-    ※本件に関する追加のご連絡をいただいた場合でも、回答を行わない場合があります。<br>
-    ※安全上の理由により、案内の範囲を制限しております。
-  </p>
+<div class="card">
 
-  <!-- ここから下は、公開対象ではありません -->
-  <!-- 参照：特別運営管理課　内部連絡 -->
-  <!-- /staff/ -->
+<h2>観光案内所（駅前）</h2>
+
+<ul>
+
+<li>受付時間：9:00〜17:00</li>
+
+<li>休館日：年末年始</li>
+
+<li>対応：観光案内／パンフレット配布／落とし物（観光関連）</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>お問い合わせフォーム（準備中）</h2>
+
+<p>
+
+現在、フォームは準備中です。お急ぎの場合は観光案内所へお問い合わせください。
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>注意事項</h2>
+
+<ul>
+
+<li>お問い合わせ内容により、回答にお時間をいただく場合があります。</li>
+
+<li>イベントの開催状況は、<a href="event.html">イベント情報</a>をご確認ください。</li>
+
+</ul>
+
+</div>
+
+
+<div class="card">
+
+<h2>体験型観光プログラムに関するお問い合わせについて</h2>
+
+<p>
+
+体験型観光プログラム「P」に関する内容、参加条件、開催場所、報酬等につきましては、
+個別のお問い合わせには対応しておりません。
+
+</p>
+
+<p class="note">
+
+※本件に関する追加のご連絡をいただいた場合でも、回答を行わない場合があります。<br>
+
+※安全上の理由により、案内の範囲を制限しております。
+
+</p>
+
+</div>
+
+
+<!-- ここから下は、公開対象ではありません -->
+<!-- 参照：特別運営管理課　内部連絡 -->
+
+
 </main>
 
+
 <footer>
-  <small>© 入江市</small>
+
+<small>入江市</small>
+
 </footer>
+
+
+<div class="fiction-notice">
+
+<div class="fiction-inner">
+
+このWebサイトの内容は考察コンテンツのために作られたフィクションであり、実在の人物・団体とは一切関係がありません。
+
+</div>
+
+</div>
+
 
 </body>
 </html>
+
