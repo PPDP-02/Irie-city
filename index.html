@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>入江市 観光公式サイト</title>
 
+  /* リンク（アクセス用） */
+.nav-disabled{
+  opacity:0.5;
+  cursor:default;
+  pointer-events:none;
+}
+
+
   <style>
     :root{
       --text:#111;
@@ -220,7 +228,7 @@
         <a href="spot.html">観光スポット</a>
         <a href="course.html">モデルコース</a>
         <a href="event.html">イベント</a>
-        <a href="access.html">アクセス</a>
+        <span class="nav-disabled">アクセス</span>
         <a href="about.html">入江市について</a>
         <a href="contact.html">お問い合わせ</a>
       </nav>
@@ -254,7 +262,7 @@
         <h3>クイックリンク</h3>
         <ul>
           <li><a href="event.html">イベント情報</a></li>
-          <li><a href="access.html">アクセス</a></li>
+          <li><span class="nav-disabled">アクセス</span></li>
           <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </aside>
