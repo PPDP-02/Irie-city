@@ -4,92 +4,276 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>観光モデルコース｜入江市 観光公式サイト</title>
+
+<style>
+:root{
+  --text:#111;
+  --muted: rgba(0,0,0,0.65);
+  --card: rgba(255,255,255,0.92);
+  --shadow: 0 10px 30px rgba(0,0,0,0.18);
+  --radius: 14px;
+}
+
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background:#f6f7f9;
+  color:var(--text);
+}
+
+/* ===== ヘッダー ===== */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:10;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.75);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+header .inner{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 14px 16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+header h1{
+  font-size:18px;
+  margin:0;
+}
+
+nav{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+
+nav a{
+  text-decoration:none;
+  color:#111;
+  padding:6px 8px;
+  border-radius:10px;
+}
+
+nav a:hover{
+  background: rgba(0,0,0,0.06);
+}
+
+/* ===== メイン ===== */
+
+main{
+  max-width:980px;
+  margin:0 auto;
+  padding:24px 16px 40px;
+}
+
+.lead{
+  margin:0 0 16px;
+  color:var(--muted);
+}
+
+/* ===== カード ===== */
+
+.card{
+
+  background:var(--card);
+
+  border-radius:var(--radius);
+
+  box-shadow:var(--shadow);
+
+  padding:18px;
+
+  border:1px solid rgba(0,0,0,0.06);
+
+  margin-bottom:16px;
+
+}
+
+.card h2{
+  margin-top:0;
+  font-size:16px;
+}
+
+.card ol{
+
+  margin:10px 0 0 18px;
+
+  line-height:1.8;
+
+}
+
+.card ul{
+
+  margin:10px 0 0 18px;
+
+  line-height:1.8;
+
+}
+
+.note{
+  margin-top:12px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* ===== フッター ===== */
+
+footer{
+  text-align:center;
+  padding:24px;
+  color: rgba(0,0,0,0.6);
+}
+
+/* ===== フィクション注意書き ===== */
+
+.fiction-notice{
+  background:#5aa9e6;
+  color:#fff;
+  font-size:13px;
+  margin-top:40px;
+}
+
+.fiction-inner{
+  max-width:980px;
+  margin:0 auto;
+  padding:18px 16px;
+  line-height:1.6;
+}
+
+</style>
 </head>
 <body>
 
 <header>
-  <h1>入江市 観光モデルコース</h1>
-  <nav>
-    <a href="index.html">トップ</a> |
-    <a href="spot.html">観光スポット</a> |
-    <a href="event.html">イベント</a> |
-    <a href="news.html">お知らせ</a> |
-    <a href="about.html">入江市について</a> |
-    <a href="contact.html">お問い合わせ</a>
-  </nav>
+<div class="inner">
+
+<h1>入江市 観光公式サイト</h1>
+
+<nav>
+<a href="index.html">トップ</a>
+<a href="spot.html">観光スポット</a>
+<a href="event.html">イベント</a>
+<a href="news.html">お知らせ</a>
+<a href="about.html">入江市について</a>
+<a href="contact.html">お問い合わせ</a>
+</nav>
+
+</div>
 </header>
 
+
 <main>
-  <p>
-    港町・入江市をはじめて訪れる方にもおすすめのモデルコースです。
-    季節や天候にあわせて、のんびりお楽しみください。
-  </p>
 
-  <h2>はじめての入江市 1日満喫コース</h2>
-  <ol>
-    <li><strong>入江市朝市</strong>で海鮮を食べ歩き（朝）</li>
-    <li><strong>入江港レトロ通り</strong>でお土産探し（午前）</li>
-    <li><strong>入江海浜公園</strong>で海辺散策・カフェ（昼）</li>
-    <li><strong>入江塗り工房</strong>で伝統工芸に触れる（午後）</li>
-    <li><strong>神橋岩（しんきょういわ）</strong>で夕景鑑賞（夕方）</li>
-  </ol>
+<p class="lead">
+港町・入江市をはじめて訪れる方にもおすすめのモデルコースです。
+季節や天候にあわせて、のんびりお楽しみください。
+</p>
 
-  <h2>海のアクティビティ体験コース</h2>
-  <ol>
-    <li><strong>入江海浜公園</strong>集合（午前）</li>
-    <li>シーカヤック体験（海況により内容が変更になる場合があります）</li>
-    <li>浜辺で休憩・写真撮影（昼）</li>
-    <li><strong>入江市朝市（昼営業エリア）</strong>で海鮮ランチ（午後）</li>
-    <li><strong>入江展望台</strong>で港の景色を一望（夕方）</li>
-  </ol>
 
-  <h2>夕日と夜景コース</h2>
-  <ol>
-    <li><strong>入江郷土資料室</strong>で街の歴史に触れる（午後）</li>
-    <li><strong>神橋岩（しんきょういわ）</strong>で夕日鑑賞（夕方）</li>
-    <li><strong>入江港レトロ通り</strong>で海鮮ディナー（夜）</li>
-  </ol>
-  
+<div class="card">
+<h2>はじめての入江市 1日満喫コース</h2>
+<ol>
+<li><strong>入江市朝市</strong>で海鮮を食べ歩き（朝）</li>
+<li><strong>入江港レトロ通り</strong>でお土産探し（午前）</li>
+<li><strong>入江海浜公園</strong>で海辺散策・カフェ（昼）</li>
+<li><strong>入江塗り工房</strong>で伝統工芸に触れる（午後）</li>
+<li><strong>神橋岩（しんきょういわ）</strong>で夕景鑑賞（夕方）</li>
+</ol>
+</div>
+
+
+<div class="card">
+<h2>海のアクティビティ体験コース</h2>
+<ol>
+<li><strong>入江海浜公園</strong>集合（午前）</li>
+<li>シーカヤック体験（海況により内容が変更になる場合があります）</li>
+<li>浜辺で休憩・写真撮影（昼）</li>
+<li><strong>入江市朝市（昼営業エリア）</strong>で海鮮ランチ（午後）</li>
+<li><strong>入江展望台</strong>で港の景色を一望（夕方）</li>
+</ol>
+</div>
+
+
+<div class="card">
+<h2>夕日と夜景コース</h2>
+<ol>
+<li><strong>入江郷土資料室</strong>で街の歴史に触れる（午後）</li>
+<li><strong>神橋岩（しんきょういわ）</strong>で夕日鑑賞（夕方）</li>
+<li><strong>入江港レトロ通り</strong>で海鮮ディナー（夜）</li>
+</ol>
+</div>
+
+
+<div class="card">
 <h2>海鮮満喫！グルメコース</h2>
 <ol>
-  <li><strong>入江市朝市</strong>で旬の魚介を食べ歩き（朝）</li>
-  <li><strong>入江港レトロ通り</strong>の海鮮食堂でランチ（昼）</li>
-  <li>港周辺を散策・カフェ休憩（午後）</li>
-  <li><strong>入江展望台</strong>で港の景色を楽しむ（夕方）</li>
-  <li><strong>入江港レトロ通り</strong>で海鮮ディナー（夜）</li>
+<li><strong>入江市朝市</strong>で旬の魚介を食べ歩き（朝）</li>
+<li><strong>入江港レトロ通り</strong>の海鮮食堂でランチ（昼）</li>
+<li>港周辺を散策・カフェ休憩（午後）</li>
+<li><strong>入江展望台</strong>で港の景色を楽しむ（夕方）</li>
+<li><strong>入江港レトロ通り</strong>で海鮮ディナー（夜）</li>
 </ol>
+</div>
 
+
+<div class="card">
 <h2>入江の映えまくりコース</h2>
 <ol>
-  <li><strong>入江海浜公園</strong>で海と空の写真撮影（午前）</li>
-  <li><strong>入江港レトロ通り</strong>で街並みスナップ（昼）</li>
-  <li><strong>入江塗り工房</strong>で伝統工芸と展示撮影（午後）</li>
-  <li><strong>神橋岩（しんきょういわ）</strong>で夕日撮影（夕方）</li>
-  <li><strong>入江展望台</strong>で夜景撮影（夜）</li>
+<li><strong>入江海浜公園</strong>で海と空の写真撮影（午前）</li>
+<li><strong>入江港レトロ通り</strong>で街並みスナップ（昼）</li>
+<li><strong>入江塗り工房</strong>で伝統工芸と展示撮影（午後）</li>
+<li><strong>神橋岩（しんきょういわ）</strong>で夕日撮影（夕方）</li>
+<li><strong>入江展望台</strong>で夜景撮影（夜）</li>
 </ol>
+</div>
 
-  <hr>
 
-  <h2>過去のモデルコース</h2>
-  <p>※現在は実施しておりません。</p>
+<div class="card">
 
-  <ul>
-    <li>
-      <strong>【旧】体験型観光モデルコースP</strong><br>
-      <small>内容：非公開</small><br>
-      <small>開催場所：非公開</small><br>
-      <small>主催：入江市</small>
-    </li>
-  </ul>
+<h2>過去のモデルコース</h2>
 
-  <p style="font-size: small;">
-    ※当コースに関する個別のお問い合わせには対応しておりません。
-  </p>
+<p class="note">※現在は実施しておりません。</p>
+
+<ul>
+
+<li>
+<strong>【旧】体験型観光モデルコースP</strong><br>
+<small>内容：非公開</small><br>
+<small>開催場所：非公開</small><br>
+<small>主催：入江市</small>
+</li>
+
+</ul>
+
+<p class="note">
+※当コースに関する個別のお問い合わせには対応しておりません。
+</p>
+
+</div>
+
 </main>
 
+
 <footer>
-  <small>© 入江市</small>
+
+<small> 入江市</small>
+
 </footer>
+
+
+<div class="fiction-notice">
+<div class="fiction-inner">
+このWebサイトの内容は考察コンテンツのために作られたフィクションであり、実在の人物・団体とは一切関係がありません。
+</div>
+</div>
+
 
 </body>
 </html>
+
