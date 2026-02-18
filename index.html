@@ -159,7 +159,7 @@
       opacity: 0.8;
     }
 
-    /* ===== 本命：No.7 が一瞬だけ見える ===== */
+    /* ===== No.7 一瞬 ===== */
     .ghost7{
       opacity: 0;
       filter: blur(0.2px);
@@ -175,7 +175,7 @@
       100%{ opacity:0; }
     }
 
-    /* ほんの少し“チラつき”を足す（気付いた人だけ） */
+    /* 気付いた人だけ */
     .ghost7 span{
       display:inline-block;
       animation: microshift 10s infinite;
@@ -209,6 +209,14 @@
   margin:0 auto;
   padding:18px 16px;
 }
+    
+    /* リンク（アクセス用） */
+nav a.nav-disabled{
+  opacity:0.5;
+  cursor:default;
+  pointer-events:none;
+}
+
 
   </style>
 </head>
@@ -222,7 +230,7 @@
         <a href="spot.html">観光スポット</a>
         <a href="course.html">モデルコース</a>
         <a href="event.html">イベント</a>
-        <span class="nav-disabled">アクセス</span>
+        <a href="access.html" class="nav-disabled" aria-disabled="true">アクセス</a>
         <a href="about.html">入江市について</a>
         <a href="contact.html">お問い合わせ</a>
       </nav>
@@ -256,7 +264,7 @@
         <h3>クイックリンク</h3>
         <ul>
           <li><a href="event.html">イベント情報</a></li>
-          <li><span class="nav-disabled">アクセス</span></li>
+          <li><a href="access.html" class="nav-disabled" aria-disabled="true">アクセス</a></li>
           <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
       </aside>
